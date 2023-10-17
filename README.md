@@ -52,4 +52,4 @@ Thank you for taking the time to explore my portfolio! 🙌
 🙌 Credits
 
 - Special thanks to OpenAI's ChatGPT-4 for assistance in generating this README.md template.
-- Immense gratitude to my Preply tutor, Jaba from Romania, for refining my repository structure and base code after the initial commits.
+- Immense gratitude to my Preply tutor, Jaba from Romania, for helping me refine my repository structure and base code after the initial commits.
