@@ -15,21 +15,34 @@ header h1 {
     padding: 10px 10px 10px 10px;
 }
 #navbar {
-    background-color: #333;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 100px;
     z-index: 1000;
+    gap: 10px;
 }
 
 #navbar a {
-    float: left;
-    display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    color:aqua;
+    position: relative; 
 }
+
+#navbar a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: aqua;
+    bottom: 0;  
+    left: 0;    
+}
+
 
 #navbar a:hover {
     background-color: #ddd;
@@ -66,30 +79,152 @@ h1, h2 {
     color: #333;
 }
 
-.profile-image {
-    max-width: 100%;
-    border-radius: 50%;
-    margin-top: 20px;
-}
-
 .project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.project-tile {
-    background-color: #252526;
-    padding: 10px;
-    margin: 10px 0;
-    flex: 1;
-    max-width: calc(33.33% - 20px);
-    box-sizing: border-box;
-    transition: transform 0.3s;
+.main {
+    background-color: rgb(206, 207, 208);
 }
 
+.main-right {
+    background-color: white
+}
+
+.main-bottom {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 20px;
+}
+
+.main-bottom h2 {
+    border-right: 3px solid rgb(16, 16, 57);
+    text-align: right;
+    padding-right: 15px;
+}
+/*
+#about-me
+{
+    border-left: 3px solid rgb(16, 16, 57);
+}
+*/
+
+#about-me
+{
+    position: relative;
+    margin-bottom: 50px;
+    background-color: rgb(206, 207, 208);
+    display:grid;
+    grid-template-columns: 20% 80%;
+    gap: 20px;
+
+}
+#about-me h2 {
+    border-right: 3px solid rgb(16, 16, 57);
+    padding-right: 15px;
+    text-align: right;
+}
+
+.project-tiles {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 0;
+    position: relative;
+    grid-gap: 20px;
+}
+
+.project-tile {
+    background-color: #252526;
+    border: 3px solid aqua;
+    height: 20vh;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    border: 0.2rem solid #252526;
+    position: relative;
+}
+
+.project-tile-1 {
+    background-image: url("./Website\ Screenshot.png");
+    background-size: cover;
+    height: 60vh;
+    grid-column: span 2;
+    position: relative;
+    border: 3px solid aqua;
+}
+.project-tile-1 > div {
+    position: absolute;
+    left:0;
+    bottom: 2%;
+    background-color: aqua;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(51, 57, 89); 
+    width: 200px;
+}
+
+.project-tile-1 > a p {
+    font-size: 13px;
+
+}
+.project-tile-1:hover {
+    transform: scale(1.05);
+}
+
+.project-tile {
+    display: flex;  
+
+}
+.project-tile-2 {
+    background-image: url("tile-two-image.jpeg");
+    display:block;
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+.project-tile-3 {
+    background-image: url("tile-three-image.jpeg");
+    display:block;
+    width: 100%;
+    height: 100%;    
+}
+
+.project-tile-4 {
+    background-image: url("tile-four-image.png");
+    display:block;
+    width: 100%;
+    height: 100%;    
+}
+
+.project-tile-5 {
+    background-image: url("tile-five-image.png");
+    display:block;
+    width: 100%;
+    height: 100%;    
+}
 .project-tile:hover {
     transform: scale(1.05);
+}
+
+.project-tile > a > div{
+    position:absolute;
+    left: 0;
+    bottom: 5%;
+    padding: 10px;
+    text-align:center;
+    text-decoration: none;
+    background-color: aqua;
+    width: 200px;
+    color: rgb(51, 57, 89);
+
+}
+
+.project-tile > a p {
+    font-size: 13px;
 }
 
 .project-image-large {
@@ -97,6 +232,50 @@ h1, h2 {
     max-width: 400px;
     display: block;
     margin: 0 auto;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    gap: 20px;
+    padding: 30px 0;
+    background-color: rgb(206, 207, 208);
+}
+#contact > div {
+    border-right:3px solid rgb(16, 16, 57); 
+}
+
+#contact h2 {
+    padding: 10px 10px 10px 10px;
+    text-align: right;
+    padding-right: 15px;
+}
+
+#contact ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-right: 100px;
+    z-index: 1000;
+    gap: 10px;
+}
+#contact ul a {
+    color: rgb(206, 207, 208);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rgb(51, 57, 89);
+    position: relative;
+}
+
+#contact ul a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(51, 57, 89);
+    bottom: 0;  
+    left: 0;    
 }
 
 @media (max-width: 768px) {
